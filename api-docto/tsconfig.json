@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "outDir": "dist",
+    "esModuleInterop": false,
+    "sourceMap": true,
+    "strict": true /* Enable all strict type-checking options. */,
+    "target": "es2017",
+    "removeComments": true,
+    "rootDir": "./",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./" /* Base directory to resolve non-absolute module names. */,
+    "paths": {
+      "*": ["*"],
+      "@api/*": ["./api/*"],
+      "@config/*": ["./config/*"],
+      "@routes/*": ["./routes/*"],
+      "@views/*": ["./views/*"],
+      "@lib/*": ["./lib/*"],
+      "@services/*": ["./services/*"],
+      "@controllers/*": ["./controllers/*"],
+      "@test/*": ["./test/*"]
+    },
+    "skipLibCheck": true /* Skip type checking of all declaration files (*.d.ts). */
+  },
+  "compileOnSave": true,
+  "include": ["**/*", "gulpfile.js"]
+}

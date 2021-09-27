@@ -1,0 +1,27 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended"],
+  "jsRules": {},
+  "linterOptions": {
+    "exclude": ["node_modules"]
+  },
+  "rules": {
+    "no-console": false,
+    "no-submodule-imports": [true, "@src", "@api", "@routes"],
+    "newline-before-return": false,
+    "no-shadowed-variable": [
+      true,
+      {
+        "class": true,
+        "enum": true,
+        "function": true,
+        "import": true,
+        "interface": true,
+        "namespace": true,
+        "typeAlias": true,
+        "typeParameter": true
+      }
+    ]
+  },
+  "rulesDirectory": []
+}

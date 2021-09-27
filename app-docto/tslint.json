@@ -1,0 +1,110 @@
+{
+  "extends": ["tslint:all", "tslint-react", "tslint-config-prettier"],
+  "rulesDirectory": [],
+  "linterOptions": {
+    "exclude": ["node_modules"]
+  },
+  "defaultSeverity": "error",
+  "jsRules": true,
+  "rules": {
+    "ban-ts-ignore": false,
+    "member-ordering": { "options": { "order": "statics-first" } },
+    "no-unsafe-any": false,
+    "no-any": false,
+    "no-inferrable-types": [true, "ignore-params", "ignore-properties"],
+    "no-magic-numbers": false,
+    "only-arrow-functions": false,
+    "typedef": {
+      "options": [
+        "call-signature",
+        "arrow-call-signature",
+        "parameter",
+        "property-declaration",
+        "member-variable-declaration"
+      ]
+    },
+    "curly": [true, "ignore-same-line"],
+
+    "no-console": {
+      "severity": "warning",
+      "options": ["debug", "info", "log", "time", "timeEnd", "trace", "table"]
+    },
+    "no-implicit-dependencies": false,
+    "no-inferred-empty-object-type": false,
+    "no-null-keyword": false,
+    "no-shadowed-variable": [
+      true,
+      {
+        "class": true,
+        "enum": true,
+        "function": true,
+        "import": true,
+        "interface": true,
+        "namespace": true,
+        "typeAlias": true,
+        "typeParameter": true,
+      }
+    ],
+    "no-submodule-imports": [
+      true,
+      "@src",
+      "@helper",
+      "@data",
+      "@images",
+      "@components",
+      "@controllers",
+      "@containers",
+      "@api",
+      "@hoc",
+      "@hooks",
+      "@saga",
+      "@store",
+      "@custom-types",
+      "@router",
+      "react-native-firebase"
+    ],
+    "no-void-expression": [true, "ignore-arrow-function-shorthand"],
+    "strict-boolean-expressions": [
+      true,
+      "allow-null-union",
+      "allow-undefined-union",
+      "allow-string",
+      "allow-enum",
+      "allow-mix",
+      "ignore-rhs"
+    ],
+    "strict-comparisons": [
+      true,
+      {
+        "allow-object-equal-comparison": true,
+        "allow-string-order-comparison": false
+      }
+    ],
+    "unnecessary-else": false,
+    "no-default-export": false,
+    "no-default-import": false,
+    "object-literal-sort-keys": false,
+    "callable-types": true,
+    "comment-format": { "options": ["check-space"] },
+    "completed-docs": {
+      "options": {
+        "classes": {
+          "visibilities": "exported"
+        }
+      }
+    },
+    "interface-over-type-literal": false,
+    "match-default-export-name": true,
+    "newline-before-return": false,
+    "prefer-function-over-method": [true, "allow-public", "allow-protected"],
+    "variable-name": {
+      "options": [
+        "ban-keywords",
+        "check-format",
+        "require-const-for-all-caps",
+        "allow-leading-underscore",
+        "allow-pascal-case"
+      ]
+    }
+  }
+}

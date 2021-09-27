@@ -1,0 +1,19 @@
+version: "3.3"
+services:
+  postgis:
+    image: mdillon/postgis:latest
+    container_name: postgisDocto
+    environment:
+      - POSTGRES_USER=postgresDocto
+      - POSTGRES_PASSWORD=PasswordDocto
+      - POSTGRES_DB=parsDocto
+    volumes:
+      - ./var/pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+networks:
+  default:
+    external:
+      name: appDocto-network
